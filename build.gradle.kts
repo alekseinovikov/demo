@@ -9,7 +9,7 @@ plugins {
 version = "0.1"
 group = "me.alekseinovikov"
 
-val kotlinVersion=project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
@@ -33,6 +33,8 @@ dependencies {
     implementation("io.micronaut:micronaut-validation")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    testImplementation("io.kotest:kotest-assertions-core")
 }
 
 
