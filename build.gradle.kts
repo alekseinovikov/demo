@@ -28,15 +28,24 @@ dependencies {
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
+    implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+
     implementation("javax.annotation:javax.annotation-api")
+
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:${coroutinesVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-rx2:${coroutinesVersion}")
-    implementation("io.micronaut:micronaut-validation")
+
+    runtimeOnly("com.h2database:h2")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
 
     testImplementation("io.kotest:kotest-assertions-core")
 }
